@@ -14,9 +14,9 @@ const Prompt = ({
   promptCharacter
 }: Props) => {
   return (
-    <p>
+    <span>
       [{userName}@{machineName} {currentDir}] {promptCharacter || '$'}{' '}
-    </p>
+    </span>
   );
 };
 

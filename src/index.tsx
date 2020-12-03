@@ -1,7 +1,7 @@
 import React from 'react';
+
 import Motd from './components/Motd';
 import TerminalLine from './components/TerminalLine';
-
 import styles from './main.module.css';
 
 interface Props {
