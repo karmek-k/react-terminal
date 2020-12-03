@@ -1,13 +1,12 @@
 import React from 'react';
+import Motd from './components/Motd';
 
 import styles from './main.module.css';
 
 export const ReactTerminal = () => {
   return (
     <div className={styles.terminal}>
-      <p>Hello world!</p>
-      <p>test test test</p>
-      <p>test test test test test</p>
+      <Motd text="Welcome to react-terminal!" />
     </div>
   );
 };
