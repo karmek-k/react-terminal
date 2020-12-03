@@ -10,6 +10,7 @@ interface Props {
   currentDir: string;
   promptCharacter?: string;
   motd?: string;
+  caretCharacter?: string;
 }
 
 export const ReactTerminal = (props: Props) => {
@@ -22,6 +23,7 @@ export const ReactTerminal = (props: Props) => {
         machineName={props.machineName}
         currentDir={props.currentDir}
         promptCharacter={props.promptCharacter}
+        caretCharacter={props.caretCharacter}
       />
     </div>
   );

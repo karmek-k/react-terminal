@@ -8,6 +8,7 @@ interface Props {
   machineName: string;
   currentDir: string;
   promptCharacter?: string;
+  caretCharacter?: string;
 }
 
 const TerminalLine = (props: Props) => {
@@ -19,7 +20,7 @@ const TerminalLine = (props: Props) => {
         currentDir={props.currentDir}
         promptCharacter={props.promptCharacter}
       />
-      <Caret />
+      <Caret character={props.caretCharacter} />
     </span>
   );
 };
