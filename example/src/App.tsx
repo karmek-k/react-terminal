@@ -10,6 +10,7 @@ const App = () => {
       machineName="react-pc"
       promptCharacter="$"
       currentDir="~"
+      motd="Welcome to react-terminal!"
     />
   );
 };
