@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Prompt from './Prompt';
+
 interface Props {
   userName: string;
   machineName: string;
@@ -7,16 +9,14 @@ interface Props {
   promptCharacter?: string;
 }
 
-const TerminalLine = ({
-  userName,
-  machineName,
-  currentDir,
-  promptCharacter
-}: Props) => {
+const TerminalLine = (props: Props) => {
   return (
-    <p>
-      [{userName}@{machineName} {currentDir}] {promptCharacter || '$'}{' '}
-    </p>
+    <Prompt
+      userName={props.userName}
+      machineName={props.machineName}
+      currentDir={props.currentDir}
+      promptCharacter={props.promptCharacter}
+    />
   );
 };
 
