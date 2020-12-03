@@ -5,13 +5,7 @@ interface Props {
 }
 
 const Motd = (props: Props) => {
-  return (
-    <p>
-      {props.text}
-      <br />
-      <br />
-    </p>
-  );
+  return <p>{props.text}</p>;
 };
 
 export default Motd;

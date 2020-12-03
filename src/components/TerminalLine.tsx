@@ -4,13 +4,18 @@ interface Props {
   userName: string;
   machineName: string;
   currentDir: string;
-  prompt?: string;
+  promptCharacter?: string;
 }
 
-const TerminalLine = ({ userName, machineName, currentDir, prompt }: Props) => {
+const TerminalLine = ({
+  userName,
+  machineName,
+  currentDir,
+  promptCharacter
+}: Props) => {
   return (
     <p>
-      [{userName}@{machineName} {currentDir}] {prompt || '$'}{' '}
+      [{userName}@{machineName} {currentDir}] {promptCharacter || '$'}{' '}
     </p>
   );
 };

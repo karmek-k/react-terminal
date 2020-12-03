@@ -8,8 +8,9 @@ const App = () => {
     <ReactTerminal
       userName="user"
       machineName="react-pc"
-      prompt="$"
+      promptCharacter="$"
       currentDir="~"
+      motd="Welcome to react-terminal!"
     />
   );
 };

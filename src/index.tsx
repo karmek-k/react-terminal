@@ -8,18 +8,20 @@ interface Props {
   userName: string;
   machineName: string;
   currentDir: string;
-  prompt?: string;
+  promptCharacter?: string;
+  motd?: string;
 }
 
 export const ReactTerminal = (props: Props) => {
   return (
     <div className={styles.terminal}>
-      <Motd text="Welcome to react-terminal!" />
+      <Motd text={props.motd} />
+      {props.motd && <br />}
       <TerminalLine
         userName={props.userName}
         machineName={props.machineName}
         currentDir={props.currentDir}
-        prompt={props.prompt}
+        promptCharacter={props.promptCharacter}
       />
     </div>
   );
