@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Caret = (props: Props) => {
-  return <span className={styles.caret}>{'█' || props.character}</span>;
+  return <span className={styles.caret}>{props.character || '█'}</span>;
 };
 
 export default Caret;
