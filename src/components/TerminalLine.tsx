@@ -2,6 +2,7 @@ import React from 'react';
 
 import Caret from './Caret';
 import Prompt from './Prompt';
+import TerminalInput from './TerminalInput';
 
 interface Props {
   userName: string;
@@ -20,6 +21,7 @@ const TerminalLine = (props: Props) => {
         currentDir={props.currentDir}
         promptCharacter={props.promptCharacter}
       />
+      <TerminalInput />
       <Caret character={props.caretCharacter} />
     </span>
   );
