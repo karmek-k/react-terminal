@@ -8,7 +8,7 @@ interface Props {
   userName: string;
   machineName: string;
   currentDir: string;
-  prompt?: string;
+  promptCharacter?: string;
 }
 
 export const ReactTerminal = (props: Props) => {
@@ -19,7 +19,7 @@ export const ReactTerminal = (props: Props) => {
         userName={props.userName}
         machineName={props.machineName}
         currentDir={props.currentDir}
-        prompt={props.prompt}
+        promptCharacter={props.promptCharacter}
       />
     </div>
   );

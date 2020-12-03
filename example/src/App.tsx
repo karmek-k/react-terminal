@@ -8,7 +8,7 @@ const App = () => {
     <ReactTerminal
       userName="user"
       machineName="react-pc"
-      prompt="$"
+      promptCharacter="$"
       currentDir="~"
     />
   );
