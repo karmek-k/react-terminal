@@ -4,7 +4,14 @@ import { ReactTerminal } from 'react-terminal';
 import 'react-terminal/dist/index.css';
 
 const App = () => {
-  return <ReactTerminal />;
+  return (
+    <ReactTerminal
+      userName="user"
+      machineName="react-pc"
+      prompt="$"
+      currentDir="~"
+    />
+  );
 };
 
 export default App;
