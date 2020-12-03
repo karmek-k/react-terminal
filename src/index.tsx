@@ -1,10 +1,5 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+import React from 'react';
 
-interface Props {
-  text: string
-}
-
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export const ReactTerminal = () => {
+  return <p>Hello world!</p>;
+};

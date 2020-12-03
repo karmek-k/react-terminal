@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { ExampleComponent } from 'react-terminal'
-import 'react-terminal/dist/index.css'
+import { ReactTerminal } from 'react-terminal';
+import 'react-terminal/dist/index.css';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return <ReactTerminal />;
+};
 
-export default App
+export default App;

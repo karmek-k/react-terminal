@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { ReactTerminal } from '.';
 
-describe('ExampleComponent', () => {
+describe('ReactTerminal', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+    expect(ReactTerminal).toBeTruthy();
+  });
+});
