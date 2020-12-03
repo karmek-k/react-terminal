@@ -13,12 +13,12 @@ npm install --save react-terminal
 ```tsx
 import React, { Component } from 'react';
 
-import MyComponent from 'react-terminal';
+import ReactTerminal from 'react-terminal';
 import 'react-terminal/dist/index.css';
 
 class Example extends Component {
   render() {
-    return <MyComponent />;
+    return <ReactTerminal />;
   }
 }
 ```
