@@ -7,8 +7,13 @@ const Motd = () => {
   if (motd) {
     return (
       <span>
-        <p>{motd}</p>
-        <br />
+        {motd}
+        {motd && (
+          <span>
+            <br />
+            <br />
+          </span>
+        )}
       </span>
     );
   }
