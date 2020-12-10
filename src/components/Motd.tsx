@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import TerminalContext from '../TerminalContext';
 
-interface Props {
-  text?: string;
-}
+const Motd = () => {
+  const { motd } = useContext(TerminalContext);
 
-const Motd = (props: Props) => {
-  return <p>{props.text}</p>;
+  if (motd) {
+    return (
+      <span>
+        <p>{motd}</p>
+        <br />
+      </span>
+    );
+  }
+
+  return <span />;
 };
 
 export default Motd;

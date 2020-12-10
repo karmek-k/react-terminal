@@ -4,25 +4,12 @@ import Caret from './Caret';
 import Prompt from './Prompt';
 import TerminalInput from './TerminalInput';
 
-interface Props {
-  userName: string;
-  machineName: string;
-  currentDir: string;
-  promptCharacter?: string;
-  caretCharacter?: string;
-}
-
-const TerminalLine = (props: Props) => {
+const TerminalLine = () => {
   return (
     <span>
-      <Prompt
-        userName={props.userName}
-        machineName={props.machineName}
-        currentDir={props.currentDir}
-        promptCharacter={props.promptCharacter}
-      />
+      <Prompt />
       <TerminalInput />
-      <Caret character={props.caretCharacter} />
+      <Caret />
     </span>
   );
 };

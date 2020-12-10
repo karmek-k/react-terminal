@@ -3,28 +3,15 @@ import React from 'react';
 import Motd from './components/Motd';
 import TerminalLine from './components/TerminalLine';
 import styles from './main.module.css';
+import TerminalContext, { TerminalSettings } from './TerminalContext';
 
-interface Props {
-  userName: string;
-  machineName: string;
-  currentDir: string;
-  promptCharacter?: string;
-  motd?: string;
-  caretCharacter?: string;
-}
-
-export const ReactTerminal = (props: Props) => {
+export const ReactTerminal = (props: TerminalSettings) => {
   return (
-    <div className={styles.terminal}>
-      <Motd text={props.motd} />
-      {props.motd && <br />}
-      <TerminalLine
-        userName={props.userName}
-        machineName={props.machineName}
-        currentDir={props.currentDir}
-        promptCharacter={props.promptCharacter}
-        caretCharacter={props.caretCharacter}
-      />
-    </div>
+    <TerminalContext.Provider value={props}>
+      <div className={styles.terminal}>
+        <Motd />
+        <TerminalLine />
+      </div>
+    </TerminalContext.Provider>
   );
 };

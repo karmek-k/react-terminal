@@ -1,18 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import TerminalContext from '../TerminalContext';
 
-interface Props {
-  userName: string;
-  machineName: string;
-  currentDir: string;
-  promptCharacter?: string;
-}
+const Prompt = () => {
+  const { userName, machineName, currentDir, promptCharacter } = useContext(
+    TerminalContext
+  );
 
-const Prompt = ({
-  userName,
-  machineName,
-  currentDir,
-  promptCharacter
-}: Props) => {
   return (
     <span>
       [{userName}@{machineName} {currentDir}] {promptCharacter || '$'}{' '}

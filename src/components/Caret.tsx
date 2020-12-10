@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import TerminalContext from '../TerminalContext';
 
 import styles from './styles/caret.module.css';
 
-interface Props {
-  character?: string;
-}
+const Caret = () => {
+  const { promptCharacter } = useContext(TerminalContext);
 
-const Caret = (props: Props) => {
-  return <span className={styles.caret}>{props.character || '█'}</span>;
+  return <span className={styles.caret}>{promptCharacter || '█'}</span>;
 };
 
 export default Caret;

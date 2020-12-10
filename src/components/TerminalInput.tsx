@@ -4,11 +4,11 @@ interface Props {
   disabled?: boolean;
 }
 
-const TerminalInput = ({ disabled }: Props) => {
+const TerminalInput: React.FC<Props> = props => {
   const [text, setText] = useState<string>('');
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLSpanElement>) => {
-    if (disabled) {
+    if (props.disabled) {
       return;
     }
 
