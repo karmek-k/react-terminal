@@ -16,11 +16,16 @@ import React, { Component } from 'react';
 import ReactTerminal from 'react-terminal';
 import 'react-terminal/dist/index.css';
 
-class Example extends Component {
-  render() {
-    return <ReactTerminal />;
-  }
-}
+const Example = () => {
+  return (
+    <ReactTerminal
+      userName="user"
+      machineName="react-pc"
+      currentDir="~"
+      motd="Welcome to react-terminal!"
+    />
+  );
+};
 ```
 
 ## License
